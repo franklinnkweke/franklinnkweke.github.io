@@ -377,101 +377,78 @@ img {
 }
 
 
-
-
-
-
-/* 
 .skills__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
 }
 
 .skills__subtitle {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .skills__text {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-} */
+  margin-bottom: 2rem;
+}
 
-/* .skills__scroll-container {
-  max-height: 300px;  */
-  /* Set the desired height for the skills container */
-  /* overflow-y: scroll;
-} */
-
-/* .skills__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding-right: 20px;  */
-  /* Add right padding to create space for scrollbar */
-/* } */
-
-/* .skills__data {
+.skills__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills__item {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-flex;
   align-items: center;
 }
 
-.skills__names {
-  display: flex;
-  align-items: center;
+.skills__item:nth-child(odd) {
+  background-color: #f2f2f2;
 }
 
-.skills__icon {
-  font-size: 24px;
-  margin-right: 10px; */
-/* }
-
-.skills__name {
-  font-size: 18px;
-  font-weight: 500;
+.skills__item:nth-child(1) {
+  background-color: #bcf7ba;
+  color: #0b0b0b
 }
 
-.skills__bar {
-  height: 8px;
-  background-color: #ccc;
-  border-radius: 50px;
-  width: 100%;
-  position: relative;
+.skills__item:nth-child(2) {
+  background-color: #bcf7ba;
+  color: #0b0b0b
 }
 
-.skills__percentage {
-  position: absolute;
-  top: -30px;
-  right: 0;
-  font-size: 14px;
-  font-weight: 500;
-} */
-
-/* Add styles for each skill bar */
-/* .skills__html {
-  background-color: #f16529;
+.skills__item:nth-child(3) {
+  background-color: #bcf7ba;
+  color: #0b0b0b
 }
 
-.skills__css {
-  background-color: #2965f1;
+/* Auto-fill colors for each technology item */
+.skills__item:nth-child(n + 4) {
+  background-color: var(--color-primary);
+  color: #0b0b0b
 }
 
-.skills__javascript {
-  background-color: #f0db4f;
+.skills__item:nth-child(n + 7) {
+  background-color: var(--color-secondary);
+  color: #0b0b0b
 }
 
-.skills__typescript {
-  background-color: #007acc;
+.skills__item:nth-child(n + 10) {
+  background-color: var(--color-tertiary);
+  color: #0b0b0b;
 }
 
-.skills__react {
-  background-color: #61dafb;
-} */
-
-/* Add styles for other skills as needed */
+/* Add more color variables as needed */
+:root {
+  --color-primary: #bcf7ba;
+  --color-secondary:#bcf7ba;
+  --color-tertiary:#bcf7ba;
+}
 
 
 /* ===== WORK =====*/

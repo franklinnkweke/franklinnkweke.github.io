@@ -41,68 +41,7 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-// Array of skills in the desired order
-const skillsOrder = [
-    'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Redux', 'Jest',
-    'Docker', 'Git', 'MongoDB', 'Postgres', 'GraphQL', 'Jira', 'AWS', 'MySQL',
-    'RESTful APIs', 'JQuery', 'JSON', 'Software Architecture', 'XML', 'SOAP',
-    'DIY', 'Apigee', 'Node.js', 'Express'
-  ];
-  
-  // Function to create the skills elements dynamically
-  function createSkillsElements() {
-    const skillsList = document.querySelector('.skills__list');
-  
-    // Add the top 5 skills to the skills list
-    for (let i = 0; i < 5; i++) {
-      const skillName = skillsOrder[i];
-      const skillElement = createSkillElement(skillName);
-      skillsList.appendChild(skillElement);
-    }
-  
-    // Add the remaining skills to the skills list with display: none
-    for (let i = 5; i < skillsOrder.length; i++) {
-      const skillName = skillsOrder[i];
-      const skillElement = createSkillElement(skillName);
-      skillElement.style.display = 'none';
-      skillsList.appendChild(skillElement);
-    }
-  }
-  
-  // Function to create a single skill element
-  function createSkillElement(skillName) {
-    const skillElement = document.createElement('div');
-    skillElement.classList.add('skills__data');
-  
-    const skillNamesElement = document.createElement('div');
-    skillNamesElement.classList.add('skills__names');
-  
-    const skillIconElement = document.createElement('i');
-    skillIconElement.classList.add(`bx`, `bxl-${skillName.toLowerCase().replace('.', '')}`, `skills__icon`);
-    skillNamesElement.appendChild(skillIconElement);
-  
-    const skillNameElement = document.createElement('span');
-    skillNameElement.classList.add('skills__name');
-    skillNameElement.textContent = skillName;
-    skillNamesElement.appendChild(skillNameElement);
-  
-    skillElement.appendChild(skillNamesElement);
-  
-    const skillBarElement = document.createElement('div');
-    const skillBarClass = `skills__bar skills__${skillName.toLowerCase().replace('.', '')}`;
-    skillBarElement.classList.add(skillBarClass);
-    skillElement.appendChild(skillBarElement);
-  
-    const skillPercentageElement = document.createElement('div');
-    const skillPercentage = '95%'; // Set the desired percentage
-    skillPercentageElement.innerHTML = `<span class="skills__percentage">${skillPercentage}</span>`;
-    skillElement.appendChild(skillPercentageElement);
-  
-    return skillElement;
-  }
-  
-  // Create the skills elements when the page has finished loading
-  window.addEventListener('load', createSkillsElements);
+
   
 
 /*===== SCROLL REVEAL ANIMATION =====*/
